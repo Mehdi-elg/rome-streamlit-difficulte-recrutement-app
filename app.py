@@ -292,9 +292,6 @@ def main():
             "L'outil retournera l'année la plus récente et le libellé de difficulté de recrutement."
         )
 
-        with st.expander("Exemple de liste de codes ROME"):
-            st.code("A1203\nM1801\nK1303\nH1102", language="text")
-
         if "df_list" not in st.session_state:
             st.session_state.df_list = None
         if "codes_list" not in st.session_state:
@@ -357,7 +354,7 @@ def main():
                 st.dataframe(
                     format_display_df(df_list),
                     use_container_width=True,
-                    height=600,
+                    height=400,
                 )
 
                 excel_bytes = df_to_excel_bytes(df_list)
@@ -367,6 +364,9 @@ def main():
                     file_name="difficulte_recrutement_IDF_selection.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 )
+                
+        with st.expander("Exemple de liste de codes ROME"):
+            st.code("A1203\nM1801\nK1303\nH1102", language="text")
 
 if __name__ == "__main__":
     main()
