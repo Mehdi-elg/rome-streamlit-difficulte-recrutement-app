@@ -288,8 +288,8 @@ def main():
         st.subheader("Recherche ciblée par liste de codes ROME")
 
         st.markdown(
-            "Colle une liste de codes ROME, **un code par ligne** (ex : A1203, M1801...). "
-            "L'outil retournera l'année la plus récente et le libellé de difficulté de recrutement."
+            "Entrez plusieurs codes ROME (1 par ligne) et "
+            "l'outil retournera l'année la plus récente et le libellé de difficulté de recrutement pour chaque ROME renseigner."
         )
 
         if "df_list" not in st.session_state:
