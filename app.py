@@ -28,7 +28,7 @@ def get_token() -> str:
             "grant_type":    "client_credentials",
             "client_id":     CLIENT_ID,
             "client_secret": CLIENT_SECRET,
-            "scope":         "offresetdemandesemploi apistats-offres-demandes-emploiv1",
+            "scope":         "offresetdemandesemploi api_stats-offres-demandes-emploiv1",
         },
     )
     resp.raise_for_status()
